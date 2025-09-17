@@ -34,12 +34,12 @@ def isPalindrome(n)
 end
 
 def nthmax(n, a) 
-    counter = 0
+    i = 0
     temp_array = a.clone
     
     while counter < n
         temp_array.delete(temp_array.max)
-        counter += 1
+        i += 1
     end
 
     return temp_array.max
@@ -49,19 +49,39 @@ def freq(s)
     if s == "" then
         return s
     end
+
     char_array = s.chars
     char_hash = Hash.new(0)
     char_array.each {|v| char_hash[v] += 1}
     freq_array = char_hash.values 
     max_freq = freq_array.max
     max_freq_index = freq_array.find_index(max_freq)
-    return char_hash.keys[max_freq_index]
+    element_array = char_hash.keys
+    return value_array[max_freq_index]
 end
 
 def zipHash(arr1, arr2)
-    raise Exception, "Not Implemented"
+    if arr1.length != arr2.length then
+        return nil
+    end
+
+    i = 0
+    result = Hash.new
+
+    while i < arr1.length
+        result[arr1[i]] = arr2[i]
+    end
+
+    return result
 end
 
 def hashToArray(hash)
-    raise Exception, "Not Implemented"
+    result = []
+    i = 0
+
+    while i < hash.length
+        result[i] = [hash.keys[i], hash.values[i]]
+    end
+
+    return result
 end
