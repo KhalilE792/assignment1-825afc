@@ -37,7 +37,7 @@ def nthmax(n, a)
     i = 0
     temp_array = a.clone
     
-    while counter < n
+    while i < n
         temp_array.delete(temp_array.max)
         i += 1
     end
@@ -57,7 +57,7 @@ def freq(s)
     max_freq = freq_array.max
     max_freq_index = freq_array.find_index(max_freq)
     element_array = char_hash.keys
-    return value_array[max_freq_index]
+    return element_array[max_freq_index]
 end
 
 def zipHash(arr1, arr2)
