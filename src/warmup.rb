@@ -3,9 +3,10 @@ def fib(n)
     result = Array.new(n)
 
     if n = 1 then
-        result = [0]
+        result[0] = 0
     elsif n > 1 then
-        result = [0, 1]
+        result[0] = 0
+        result[1] = 1
         index = 2
     end
 
