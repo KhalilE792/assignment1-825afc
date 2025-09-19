@@ -8,7 +8,9 @@ class PhoneBook
     def add(name, number, is_listed)
         if @listed_numbers.member?(number) || @pbook.keys.member?(name) then
             return false
-        elsif !number.include?(/^\d{3}-\d{3}-\d{4}$/) then
+        end
+        format = number.scan(/^\d{3}-\d{3}-\d{4}$/)
+        if number != format[0] then
             return false
         end
 
