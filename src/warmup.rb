@@ -70,6 +70,7 @@ def zipHash(arr1, arr2)
 
     while i < arr1.length
         result[arr1[i]] = arr2[i]
+        i += 1
     end
 
     return result
@@ -81,6 +82,7 @@ def hashToArray(hash)
 
     while i < hash.length
         result[i] = [hash.keys[i], hash.values[i]]
+        i += 1
     end
 
     return result

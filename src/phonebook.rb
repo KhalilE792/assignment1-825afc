@@ -33,6 +33,7 @@ class PhoneBook
                 if @pbook[@listed_names[i]] == number then
                     return @listed_names[i]
                 end
+                i += 1
             end
         end
         return nil
@@ -46,6 +47,7 @@ class PhoneBook
             if areacode == str[0..2] then
                 result.push(@pbook.keys[i])
             end
+            i += 1
         end
         return result
     end
