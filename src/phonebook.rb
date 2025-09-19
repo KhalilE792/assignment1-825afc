@@ -19,6 +19,7 @@ class PhoneBook
             @listed_names.push(name)
             @listed_numbers.push(number)
         end
+        return true
     end
 
     def lookup(name)
