@@ -1,6 +1,6 @@
 def fib(n)
     index = n
-    result = []
+    result = Array.new(n)
 
     if n = 1 then
         result = [0]
